@@ -71,8 +71,8 @@ smp-2026/
 ### Модуль 1
 
 - [x] `praktyka/01-movy` — три предметні мови з власного досвіду
-- [ ] `praktyka/02-git` — репозиторій, коміти, гілка, злиття
-- [ ] `praktyka/03-rozmitka` — README і семантичний HTML
+- [x] `praktyka/02-git` — репозиторій, коміти, гілка, злиття
+- [x] `praktyka/03-rozmitka` — README і семантичний HTML
 - [ ] `praktyka/04-konfihuratsiya` — одна конфігурація трьома мовами
 - [ ] `praktyka/05-regex` — регулярні вирази: пошук
 - [ ] `praktyka/06-regex-log` — розбір журналу сервера
