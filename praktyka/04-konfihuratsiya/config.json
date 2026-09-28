@@ -3,7 +3,7 @@
     "version": "1.10",
     "debug": false,
     "port": 8080,
-    "max_orders_per_hour": 15,
+    "max_orders_per_hour": 35,
     "tax_rate": 0.15,
     "currency": "UAH",
     "languages": ["uk", "zh", "en"],
