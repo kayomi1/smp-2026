@@ -1,0 +1,15 @@
+    app_name: "Pizza bot"
+    version: "1.10"
+    debug: false
+    port: 8080
+    max_orders_per_hour: 15
+    tax_rate: 0.15
+    currency: UAH
+    languages:
+      - uk
+      - zh
+      - en
+    database:
+        host: localhost
+        port: 3456
+        name: pizza
