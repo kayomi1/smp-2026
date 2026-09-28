@@ -13,3 +13,4 @@
         host: localhost
         port: 3456
         name: pizza
+        password_env: DB_PASSWORD
