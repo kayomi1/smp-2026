@@ -14,6 +14,7 @@ propusheno = 0
 ip = Counter()
 kody = Counter()
 pomylky_5xx = []
+ne_znaideno = Counter()
 
 with open("data/access.log", encoding="utf-8") as f:
     for ryadok in f:
@@ -26,6 +27,9 @@ with open("data/access.log", encoding="utf-8") as f:
         kody[m["kod"]] += 1
         if m["kod"].startswith("5"):
             pomylky_5xx.append((m["chas"], m["shlyah"]))
+
+        if m["kod"] == "404":
+            ne_znaideno[m["shlyah"]] += 1
 
 print(f"1. Розібрано: {rozibrano}, пропущено: {propusheno}")
 
@@ -40,3 +44,7 @@ for kod, kilkist in sorted(kody.items()):
 print(f"\n4. Помилки 5xx ({len(pomylky_5xx)}):")
 for chas, shlyah in pomylky_5xx:
     print(f"   {chas}  {shlyah}")
+
+print("\n5. Шляхи з 404:")
+for shlyah, kilkist in ne_znaideno.most_common():
+    print(f"   {kilkist}: {shlyah}")
