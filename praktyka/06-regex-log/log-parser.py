@@ -5,8 +5,8 @@ shablon = re.compile(
     r'(?P<ip>\d+\.\d+\.\d+\.\d+)'
     r'.*?'
     r'\[(?P<chas>[^\]]+)\]'
-    r'\s+"(?P<metod>\S+) (?P<shlyah>\S+) [^"]*"'
-    r'\s+(?P<kod>\d{3})'
+    r' "(?P<metod>\w+) (?P<shlyah>\S+)[^"]*"'
+    r' (?P<kod>\d{3})'
 )
 
 rozibrano = 0
@@ -31,7 +31,7 @@ print(f"1. Розібрано: {rozibrano}, пропущено: {propusheno}")
 
 print("\n2. Топ-5 IP:")
 for adresa, kilkist in ip.most_common(5):
-    print(f"   {kilkist} {adresa}")
+    print(f"   {kilkist}: {adresa}")
 
 print("\n3. Запити за кодами:")
 for kod, kilkist in sorted(kody.items()):
