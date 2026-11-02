@@ -23,10 +23,8 @@
 > **Навчаєтесь асинхронно або не змогли бути на парі?** Ті самі кроки,
 > дедлайн — до початку наступного заняття (це день захисту, **02.11**), посилання — у чат.
 > Усне пояснення на розборі вам замінюють `peredbachennia.md` і `rezultat.md`.
-
 > **Робота модуля 1 ще не готова?** Зробіть мінімум (кроки 0–3, пункти 1–5) і пишіть мені
 > в чат — з 13:40 консультації. Захист — **02.11**.
-
 > **SQL для вас не новий?** Кроки 0–5 — у своєму темпі,
 > а потім одразу **⭐3–⭐4** внизу: там справжня задача.
 
@@ -34,7 +32,7 @@
 
 ## Крок 0. Файли роботи з шаблону (5 хв)
 
-```
+```git
 cd ~/smp-2026
 git fetch shablon
 git checkout shablon/master -- praktyka/08-sql-join
@@ -49,7 +47,7 @@ git commit -m "Файли роботи 8 із шаблону"
 стовпець в одній таблиці містить номер рядка з іншої.
 
 | Звʼязок | Умова для `ON` |
-|---|---|
+| --- | --- |
 | виконавець → його альбоми | `Album.ArtistId = Artist.ArtistId` |
 | альбом → його треки | `Track.AlbumId = Album.AlbumId` |
 | жанр → треки цього жанру | `Track.GenreId = Genre.GenreId` |
@@ -72,7 +70,7 @@ SELECT * FROM Employee;
 Створіть `praktyka/08-sql-join/peredbachennia.md` і **спершу** запишіть, що поверне кожен запит:
 
 | # | Запит |
-|---|---|
+| --- | --- |
 | A | `SELECT COUNT(*) FROM Artist JOIN Album ON Artist.ArtistId = Album.ArtistId` |
 | B | `SELECT COUNT(*) FROM Artist LEFT JOIN Album ON Artist.ArtistId = Album.ArtistId` |
 | C | `SELECT COUNT(*) FROM Artist, Album` |
@@ -81,14 +79,14 @@ SELECT * FROM Employee;
 
 Тепер перевірте:
 
-```
+```python
 python praktyka/08-sql-join/sproby.py
 ```
 
 Під кожним передбаченням допишіть: **«Показала: … Я вгадав / не вгадав, бо …»**.
 Порада: якщо A і B вийшли різними — подумайте, **на скільки** і що це за рядки. Це підказка до пункту 5.
 
-```
+```git
 git add praktyka/08-sql-join/peredbachennia.md
 git commit -m "Передбачення: JOIN і GROUP BY"
 ```
@@ -107,7 +105,7 @@ git commit -m "Передбачення: JOIN і GROUP BY"
 7. Виторг за країнами (за рахунками): країна, сума; від найбільшого.
 8. Співробітники підтримки й скільки клієнтів у кожного: імʼя, прізвище, клієнтів; від найбільшого.
 
-```
+```python
 python praktyka/08-sql-join/perevir.py
 python praktyka/08-sql-join/perevir.py 5     ← лише пункт 5, з усіма рядками
 ```
