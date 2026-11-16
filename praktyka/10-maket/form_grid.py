@@ -15,6 +15,9 @@ vikno.title("Реєстрація — grid")
 #   кнопки «Зареєструватись» і «Скасувати» — внизу праворуч.
 # Тут — grid для заголовка, підписів, полів і прапорця. Кнопки можна зібрати у tk.Frame (усередині — будь-який менеджер).
 
+vikno.columnconfigure(0, weight=0)
+vikno.columnconfigure(1, weight=1)
+
 tk.Label(vikno, text="Реєстрація", font=("Consolas", 16)).grid(row=0, column=0, columnspan=2, pady=10)
 tk.Label(vikno, text="Імʼя:").grid(row=1, column=0, sticky="e", padx=6, pady=5)
 tk.Entry(vikno).grid(row=1, column=1, sticky="ew", padx=6)
